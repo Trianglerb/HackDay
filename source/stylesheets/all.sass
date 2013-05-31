@@ -1,0 +1,66 @@
+@import compass/css3
+@charset "utf-8"
+
+$body_text_color: rgb(63, 59, 49)
+
+@font-face
+  font-family: Hipster
+  src: url('/webfonts/Hipster.otf')
+@font-face
+  font-family: Brandon
+  src: url('/webfonts/Brandon.otf')
+
+body
+  background: rgb(255, 244, 212)
+  text-align: center
+  font-family: Brandon
+  color: $body_text_color
+
+a
+  font-weight: bold
+  color: $body_text_color
+
+.header
+  height: 200px
+  background-image: linear-gradient(color-stops(rgb(167, 60, 12) 90%, rgb(135,  49,  11)))
+  > img
+    margin-top: 20px
+
+.welcome
+  font-family: Hipster
+  margin-bottom: 70px
+  h1
+    -webkit-animation-name: welcome
+    -webkit-animation-duration: 1.5s
+    color: rgb(138, 130, 109)
+    font-weight: bold
+    font-size: 64px
+    letter-spacing: -1px
+    padding: 200px 0 10px
+    margin: 0
+    line-height: 0.5em
+  .subtext
+    a
+      text-decoration: none
+    li
+      list-style: none
+      display: inline
+      margin-right: 20px
+
+.date
+  font-size: 30px
+  font-weight: bold
+
+@-webkit-keyframes welcome
+  from
+    -webkit-transform: scale(0)
+    opacity: 0
+  50%
+    -webkit-transform: scale(0)
+    opacity: 0
+  82.5%
+    -webkit-transform: scale(1.03)
+    -webkit-animation-timing-function: ease-out
+    opacity: 1
+  to
+    -webkit-transform: scale(1)
