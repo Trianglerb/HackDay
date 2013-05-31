@@ -1,7 +1,10 @@
 @import compass/css3
+@import foundation
 @charset "utf-8"
 
+$total-columns: 12
 $body_text_color: rgb(63, 59, 49)
+$body_background_color: rgb(255, 244, 212)
 
 @font-face
   font-family: Hipster
@@ -11,27 +14,34 @@ $body_text_color: rgb(63, 59, 49)
   src: url('/webfonts/Brandon.otf')
 
 body
-  background: rgb(255, 244, 212)
+  background: $body_background_color
   text-align: center
   font-family: Brandon
   color: $body_text_color
+  font-size: 20px
 
 a
   font-weight: bold
-  color: $body_text_color
+  color: inherit
+a:hover
+  color: #a73c0c
 
 .header
+  color: $body_background_color
   height: 200px
   background-image: linear-gradient(color-stops(rgb(167, 60, 12) 90%, rgb(135,  49,  11)))
   .logo
     padding-top: 43px
     text-align: center
     vertical-align: bottom
+  .links
+    font-size: 40px
+    padding-top: 10px
 
 .welcome
-  font-family: Hipster
   margin-bottom: 70px
   h1
+    font-family: Hipster
     -webkit-animation-name: welcome
     -webkit-animation-duration: 1.5s
     color: rgb(138, 130, 109)
@@ -44,14 +54,25 @@ a
   .subtext
     a
       text-decoration: none
-    li
-      list-style: none
-      display: inline
-      margin-right: 20px
 
 .date
   font-size: 30px
   font-weight: bold
+
+.blurb
+  font-size: 25px
+
+
+footer
+  margin-top: 50px
+  padding: 20px
+  height: 150px
+  background: rgb(63, 60, 51)
+  color: $body_background_color
+  li
+    list-style: none
+    display: inline
+    margin-right: 20px
 
 @-webkit-keyframes welcome
   from
@@ -66,3 +87,5 @@ a
     opacity: 1
   to
     -webkit-transform: scale(1)
+
+@import responsive

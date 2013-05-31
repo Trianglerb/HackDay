@@ -5,6 +5,7 @@
 # Susy grids in Compass
 # First: gem install susy
 # require 'susy'
+require 'zurb-foundation'
 
 # Change Compass configuration
 compass_config do |config|
